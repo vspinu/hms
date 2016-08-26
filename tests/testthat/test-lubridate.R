@@ -14,9 +14,7 @@ test_that("interval", {
 })
 
 test_that("period", {
-  skip_if_not_installed("lubridate")
-  expect_message(
+    skip_if_not_installed("lubridate")
     expect_identical(lubridate::as.period(hms(hours = -1)),
-                     lubridate::period(-1, "hours")),
-    "estimate only")
+                     lubridate::period(-1, "hours"))
 })
